@@ -69,5 +69,15 @@ public class UserRegistrationTest {
         boolean result = userRegistration.loginRule3Validation("aqLawhrpnm");
         Assertions.assertFalse(result);
     }
+    @Test
+    public void givenRule4Values_WhenProper_ShouldReturnTrue(){
+        boolean result = userRegistration.loginValidationOneSpecialCharacter("adqe1aaL@fp");
+        Assertions.assertTrue(result);
+    }
+    @Test
+    public void givenRule4Values_WhenNotProper_ShouldReturnFalse(){
+        boolean result = userRegistration.loginValidationOneSpecialCharacter("awwfleropnm");
+        Assertions.assertFalse(result);
+    }
 }
 

@@ -68,6 +68,14 @@ public class UserRegistration {
         matcher = pattern.matcher(name);
         return matcher.matches();
     }
+    //create methofd to validation one special value data
+    public boolean loginValidationOneSpecialCharacter(String name){
+        String regex = "^(?=.*[A-Z]){1}(?=.*[a-z])(?=.*[0-9])(?=.*[@#$%!]).{8,}$";
+        pattern = Pattern.compile(regex);
+        matcher = pattern.matcher(name);
+        return matcher.matches();
+    }
+
 }
 
 
