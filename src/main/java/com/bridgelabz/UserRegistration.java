@@ -75,6 +75,9 @@ public class UserRegistration {
         matcher = pattern.matcher(name);
         return matcher.matches();
     }
+    public boolean checkPassword(String password) {
+        return (password.matches("[a-zA-Z]{8,}"));
+    }
 
 }
 
