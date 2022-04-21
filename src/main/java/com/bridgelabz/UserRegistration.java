@@ -44,6 +44,15 @@ public class UserRegistration {
         matcher = pattern.matcher(number);
         return matcher.matches();
     }
+
+    // methodlogin to validation of login value should have minimum eight value data
+
+    public boolean loginValidation(String name) {
+        String regex = "[A-Za-z0-9]{8,}";
+        pattern = Pattern.compile(regex);
+        matcher = pattern.matcher(name);
+        return matcher.matches();
+    }
 }
 
 

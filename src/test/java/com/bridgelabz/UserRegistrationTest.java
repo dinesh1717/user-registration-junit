@@ -39,5 +39,16 @@ public class UserRegistrationTest {
         boolean result = userRegistration.numberValidation("11 121212111");
         Assertions.assertFalse(result);
     }
+    @Test
+    public void giveLoginRule1Value_WhenProper_ShouldReturnTrue() {
+        boolean result = userRegistration.loginValidation("agnnfwqopn");
+        Assertions.assertTrue(result);
+    }
+
+    @Test
+    public void givenLoginRule1Values_WhenNotProper_ShouldReturnFalse() {
+        boolean result = userRegistration.loginValidation("aqropnm");
+        Assertions.assertFalse(result);
+    }
 }
 
